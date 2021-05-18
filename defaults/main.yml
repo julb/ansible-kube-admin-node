@@ -1,0 +1,12 @@
+---
+kubectl_releases_url: https://dl.k8s.io/release
+kubectl_version: 1.21.0
+kubectl_os: linux
+kubectl_arch: amd64
+kubectl_executable_sha256_checksum: 9f74f2fa7ee32ad07e17211725992248470310ca1988214518806b39b1dad9f0
+
+helm_releases_url: https://get.helm.sh
+helm_version: 3.5.4
+helm_os: linux
+helm_arch: amd64
+helm_executable_sha256_checksum: a8ddb4e30435b5fd45308ecce5eaad676d64a5de9c89660b56face3fe990b318

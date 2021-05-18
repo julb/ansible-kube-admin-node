@@ -1,0 +1,4 @@
+---
+# vars file for kube-cli
+kubectl_executable: /usr/local/sbin/kubectl
+helm_executable: /usr/local/sbin/helm

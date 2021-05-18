@@ -1,0 +1,9 @@
+---
+
+- name: install kubectl
+  ansible.builtin.import_tasks: kubectl.yml
+  tags: kubectl
+
+- name: install helm
+  ansible.builtin.import_tasks: helm.yml
+  tags: helm

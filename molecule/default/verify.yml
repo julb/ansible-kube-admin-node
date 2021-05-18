@@ -1,0 +1,14 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: check kubectl installed
+      ansible.builtin.shell: "kubectl version --client"
+      changed_when: no
+
+    - name: check helm installed
+      ansible.builtin.shell: "helm version"
+      changed_when: no
