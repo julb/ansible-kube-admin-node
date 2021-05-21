@@ -7,3 +7,13 @@
 - name: install helm
   ansible.builtin.import_tasks: helm.yml
   tags: helm
+
+- name: install kubectl shell aliases
+  include_role:
+    name: julb.shell_aliases
+  vars:
+    shell_aliases_shell_files:
+      - /etc/profile.d/kube-cli-aliases.sh
+      - /etc/profile.d/kube-cli-aliases.csh
+    shell_aliases: "{{ kube_cli_shell_aliases }}"
+    shell_aliases_extras: "{{ kube_cli_shell_aliases_extras }}"

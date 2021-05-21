@@ -10,3 +10,13 @@ helm_version: 3.5.4
 helm_os: linux
 helm_arch: amd64
 helm_executable_sha256_checksum: a8ddb4e30435b5fd45308ecce5eaad676d64a5de9c89660b56face3fe990b318
+
+kube_cli_shell_aliases:
+  - name: k
+    command: 'kubectl'
+  - name: ks
+    command: 'kubectl --namespace kube-system'
+  - name: kctx
+    command: 'kubectl config use'
+
+kube_cli_shell_aliases_extras: []
