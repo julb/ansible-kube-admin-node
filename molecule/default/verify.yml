@@ -6,9 +6,9 @@
   gather_facts: false
   tasks:
     - name: check kubectl installed
-      ansible.builtin.shell: "kubectl version --client"
+      ansible.builtin.command: "kubectl version --client"
       changed_when: no
 
     - name: check helm installed
-      ansible.builtin.shell: "helm version"
+      ansible.builtin.command: "helm version"
       changed_when: no

@@ -9,7 +9,7 @@
 
 - name: get kubectl version
   become: yes
-  ansible.builtin.shell: 
+  ansible.builtin.command: 
     cmd: "{{ kubectl_executable }} version --client"
   register: kubectl_installed_version
   changed_when: no

@@ -6,12 +6,18 @@
         url: "{{ helm_releases_url }}/helm-v{{ helm_version }}-{{ helm_os }}-{{ helm_arch }}.tar.gz"
         dest: /tmp/
         checksum: "sha256:{{ helm_executable_sha256_checksum }}"
+        mode: 0755
+        owner: root
+        group: root
       changed_when: no
 
     - name: create target folder for helm unarchiving
       ansible.builtin.file:
         path: "/tmp/helm-v{{ helm_version }}-{{ helm_os }}-{{ helm_arch }}"
         state: directory
+        mode: 0755
+        owner: root
+        group: root
       changed_when: no
 
     - name: unarchive the helm distribution and extract binary
@@ -42,7 +48,7 @@
 
 - name: get helm version
   become: yes
-  ansible.builtin.shell: 
+  ansible.builtin.command: 
     cmd: "{{ helm_executable }} version"
   register: helm_installed_version
   changed_when: no
